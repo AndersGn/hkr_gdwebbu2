@@ -1,0 +1,126 @@
+/*
+==========================================================================
+Main structure
+========================================================================== 
+*/
+body {
+    background-color: #801802;
+    margin: 0rem; /* 1 rem = 10px */
+    font-family: 'Noto Sans', sans-serif;
+    padding-bottom: 0px;
+    padding-top: 3rem;
+    color: #ffffff;
+    
+}
+
+.navbar {
+margin-bottom: 20px;
+background: black;
+    border-bottom: .05rem solid #7DA73E;
+
+}
+
+/* Customize container */
+@media (min-width: 48em) {
+  .container {
+/*    max-width: 46rem;*/
+  }
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: .05rem solid #e5e5e5;
+    margin-bottom: 0px;
+    background-image: url(../images/_MG_7712_small.jpg);
+    background-position: 0% 25%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.3em 0.3em 0.3em;
+}
+.jumbotron .btn {
+  padding: .75rem 1.5rem;
+  font-size: 1.5rem;
+}
+
+
+/* Supporting marketing content */
+.marketing {
+  margin: 3rem 0;
+}
+.marketing p + h4 {
+  margin-top: 1.5rem;
+}
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 48em) {
+  /* Remove the padding we set earlier */
+  .header,
+  .marketing,
+  footer {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  /* Space out the masthead */
+  .header {
+    margin-bottom: 2rem;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+.container-narrow > hr {
+  margin: 2rem 0;
+}
+
+.navbar-inverse .navbar-nav .nav-link { 
+  color:#7DA73E !important;
+}
+
+.navbar-inverse .navbar-nav .nav-link.startfocus {
+    color:#ffffff !important;
+}
+
+.navbar-inverse .navbar-nav .nav-link:hover {
+
+
+   color: #ffffff !important;
+
+}
+
+
+/* Custom page footer */
+footer{
+ background-color: #000000;
+ border-top: .05rem solid #7DA73E;
+
+}
+
+.secondary-footer {
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
+  background-color: #7DA73E;
+  border-color: #7DA73E;
+ }
+
+.btn
+{
+    border-color: #7DA73E;
+    border-width: 3px;
+    color:#7DA73E;
+    font-family: 'Noto Sans';
+
+}
+
+a {
+    color: #7DA73E;
+}
+
+.navbar-toggler-icon {
+      background-image:url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(125,167,62, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+}
