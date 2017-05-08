@@ -17,6 +17,7 @@ body {
 margin-bottom: 20px;
 background: black;
     border-bottom: .05rem solid #7DA73E;
+    border-top: .05rem solid #7DA73E;
 
 }
 
@@ -38,12 +39,20 @@ background: black;
     background-repeat: no-repeat;
     color: white;
     text-shadow: black 0.3em 0.3em 0.3em;
+    text-align: center;
 }
 .jumbotron .btn {
   padding: .75rem 1.5rem;
   font-size: 1.5rem;
 }
 
+
+/* Small devices (tablets, 320px and up) */
+@media (min-width: 320px) {
+    .jumbotron h1 {
+        font-size: 3em;
+    }
+}
 
 /* Supporting marketing content */
 .marketing {
@@ -97,6 +106,7 @@ background: black;
 footer{
  background-color: #000000;
  border-top: .05rem solid #7DA73E;
+    border-bottom: .05rem solid #7DA73E;
 
 }
 
