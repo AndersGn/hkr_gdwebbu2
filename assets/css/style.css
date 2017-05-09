@@ -47,11 +47,16 @@ background: black;
 }
 
 
-/* Small devices (tablets, 320px and up) */
-@media (min-width: 320px) {
+/* Small devices (tablets, 320px) */
+@media (max-width: 320px) {
     .jumbotron h1 {
-        font-size: 3em;
+        font-size: 3.5em;
     }
+    footer p{
+        
+        font-size: 0.8rem;
+
+}
 }
 
 
@@ -133,8 +138,8 @@ article p {
 
 /* Custom page footer */
 footer{
- background-color: #000000;
- border-top: .05rem solid #7DA73E;
+    background-color: #000000;
+    border-top: .05rem solid #7DA73E;
     border-bottom: .05rem solid #7DA73E;
 
 }
