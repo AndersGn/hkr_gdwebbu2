@@ -57,6 +57,12 @@ background: black;
         font-size: 0.8rem;
 
 }
+    .marketing h5 {
+  font-size: 1em;
+}
+  .marketing p {
+  font-size: 0.8em;
+}
 }
 
 
@@ -78,7 +84,7 @@ background: black;
 .marketing {
   margin: 1.5rem 0;
 }
-.marketing p + h4 {
+.marketing p + h5 {
   margin-top: 1.5rem;
 }
 
