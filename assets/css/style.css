@@ -57,7 +57,7 @@ background: black;
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-    .jumbotron h1r {
+    .jumbotron h1 {
         font-size: 6em;
     }
 }
@@ -95,6 +95,15 @@ background: black;
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+article {
+        border-bottom: .05rem solid #7DA73E;
+}
+
+
+article p {
+        font-family: 'Arial';
 }
 
 .container-narrow > hr {
