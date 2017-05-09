@@ -47,8 +47,8 @@ background: black;
 }
 
 
-/* Small devices (tablets, 320px) */
-@media (max-width: 320px) {
+/* Small devices (tablets, 520px) */
+@media (max-width: 520px) {
     .jumbotron h1 {
         font-size: 3.5em;
     }
