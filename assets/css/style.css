@@ -30,7 +30,7 @@ body {
 .jumbotron {
     text-align: center;
     border-bottom: .05rem solid #7DA73E;
-    margin-bottom: 0.2rem !important;
+    margin-bottom: 0.5rem !important;
     background-image: url(../images/_MG_7712_small.jpg);
     background-position: 0% 25%;
     background-size: cover;
@@ -102,7 +102,7 @@ body {
 
 
 .jumbotron {
-    margin-bottom: 0.2rem !important;
+    margin-bottom: 0.5rem !important;
 }
 
 article {
