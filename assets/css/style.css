@@ -29,7 +29,7 @@ body {
 /* Main marketing message and sign up button */
 .jumbotron {
     text-align: center;
-    border-bottom: .05rem solid #e5e5e5;
+    border-bottom: .05rem solid #7DA73E;
     margin-bottom: 1rem;
     background-image: url(../images/_MG_7712_small.jpg);
     background-position: 0% 25%;
@@ -97,26 +97,6 @@ body {
         margin-top: 1.5rem;
     }
 
-
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 48em) {
-    /* Remove the padding we set earlier */
-    .header,
-    .marketing,
-    footer {
-        padding-right: 0;
-        padding-left: 0;
-    }
-    /* Space out the masthead */
-    .header {
-        margin-bottom: 2rem;
-    }
-    /* Remove the bottom border on the jumbotron for visual effect */
-    .jumbotron {
-        border-bottom: 0;
-        margin-bottom: 1rem;
-    }
-}
 
 .jumbotron {
     margin-bottom: 1rem !important;
