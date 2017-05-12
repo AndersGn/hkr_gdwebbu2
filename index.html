@@ -16,12 +16,27 @@
 <body>
     <header class="container">
         <nav class="navbar navbar-inverse fixed-top">
+            <i class="fa fa-search pr-3 mysearch" aria-hidden="true"></i>
+
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button>
-            <a class="navbar-brand">
-                <img src="assets/images/LoggaEksjoKommun_vitsvart.svg" width="147" height="50" class="d-inline-block align-top" alt="Logotyp"></a>
+              </button>
+            <div class="navbar-brand">
+                <img src="assets/images/LoggaEksjoKommun_vitsvart.svg" width="147" height="50" class="d-inline-block align-top" alt="Logotyp">
+            </div>
+            <div class="container mysearchcontainer">                
+                <div class="col-md-12">
+                <form action="index.html" class="mysearchform"> 
+                    <div class="form-group row">
+                        <input type="text" class="form-control" placeholder="Vad letar du efter?">
+                        <input type="submit" name="commit" value="Sök" class="btn btn-outline-success my-2 searchbutton mysearch">
+                    </div>
+                </form>                    
+              </div>
+            </div>
+            
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
                         <a class="nav-link startfocus" href="#">Startsidan <span class="sr-only">(current)</span></a>
@@ -63,13 +78,10 @@
                     -->
 
                 </ul>
-                <form class="form-inline my-2 my-lg-0">
-                    <input class="form-control mr-sm-2" type="text" placeholder="Vad letar du efter?">
-                    <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="collapse" data-target="#navbarsExampleDefault" type="submit">Sök</button>
-                </form>
             </div>
         </nav>
     </header>
+
     <main class="mt-1">
         <div class="jumbotron">
             <div class="container">
@@ -219,6 +231,14 @@
             });
           }
         });
+    </script>
+        <!-- Show / hide search field -->
+    <script>
+$(document).ready(function(){
+    $('.mysearch').click(function(){
+     $("form.mysearchform").toggleClass("showsearchform");
+    });
+});
     </script>
 </body>
 </html>
