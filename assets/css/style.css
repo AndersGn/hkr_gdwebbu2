@@ -106,7 +106,7 @@ body {
 }
 
 article {
-
+cursor: pointer;
 
 }
 
@@ -125,7 +125,8 @@ article {
 }
 
 article p {
-        font-family: 'Arial';
+    font-family: 'Arial';
+    
 
     }
 

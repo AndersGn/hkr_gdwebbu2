@@ -65,7 +65,7 @@
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="Vad letar du efter?">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sök</button>
+                    <button class="btn btn-outline-success my-2 my-sm-0" data-toggle="collapse" data-target="#navbarsExampleDefault" type="submit">Sök</button>
                 </form>
             </div>
         </nav>
@@ -195,12 +195,29 @@
     <script src="assets/js/tether.min.js"></script>
     <script src="assets/js/jquery-3.1.1.slim.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Make the current page active in navbar -->
     <script>
         $(function () {
             $(document).on('click', '.nav-item a', function (e) {
                 $('.nav-link').removeClass('startfocus');
                 $(this).addClass('startfocus');
             });
+        });
+    </script>
+    <!-- Make it possible to close hamburger menu when clicking somewehere otuside hambuger -->
+    <script>
+        $(document).on('click', function(event){
+          var $clickedOn = $(event.target),
+              $collapsableItems = $('.collapse'),
+              isToggleButton = ($clickedOn.closest('.navbar-toggle').length == 1),
+              isLink = ($clickedOn.closest('a').length == 1),
+              isOutsideNavbar = ($clickedOn.parents('.navbar').length == 0);
+
+          if( (!isToggleButton && isLink) || isOutsideNavbar ) {
+            $collapsableItems.each(function(){
+              $(this).collapse('hide');
+            });
+          }
         });
     </script>
 </body>
