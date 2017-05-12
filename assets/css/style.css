@@ -70,7 +70,7 @@ body {
 }
 
 
-/* Medium devices (desktops, 768px and up) */
+/* Medium devices desktops, 768px and up */
 @media (min-width: 768px) {
     .jumbotron h1 {
         font-size: 8em;
@@ -82,9 +82,6 @@ body {
 
     .marketing p {
         font-size: 1em;
-    }
-        .mysearchcontainer {
-        padding: 0px;
     }
 }
 
