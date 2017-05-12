@@ -107,9 +107,13 @@ article {
 }
 
 
-    article p {
+article p {
         font-family: 'Arial';
     }
+
+article img {
+    border-radius: 4px;
+}
 
 .container-narrow > hr {
     margin: 2rem 0;
