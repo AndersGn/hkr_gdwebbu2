@@ -238,7 +238,7 @@
             });
         });
     </script>
-    <!-- Make it possible to close hamburger menu when clicking somewehere otuside hambuger -->
+    <!-- Make it possible to close hamburger menu when clicking somewehere outside hambuger -->
     <script>
         $(document).on('click', function (event) {
             var $clickedOn = $(event.target),
@@ -268,7 +268,8 @@
                 if ($clickedOn.parents('.navbar').length == 0 && $("form.mysearchform").hasClass("showsearchform")) {
                     $("form.mysearchform").toggleClass("showsearchform");
                 }
-            });
+
+           });
     </script>
     <!-- Show / hide language field -->
     <script>
@@ -291,6 +292,55 @@
                 }
             });
         });
+    </script>
+    <!-- if not choosen search or language then hide them -->
+    <script>
+    $(document).ready(function () {
+            var $collapsableItems = $('.collapse');
+
+            // Clean up choices (a real ugly hack but javascript is not focus in assigment only UI handling, navigation)
+
+            // Click on search
+            $('.mysearch').click(function () {
+                // Hide language choises
+                if ($("form.mylanguageform").hasClass("showlanguageform")) {
+                    $("form.mylanguageform").toggleClass("showlanguageform");
+                }
+
+                // Hide any navigation items
+                 $collapsableItems.each(function () {
+                    $(this).collapse('hide');
+                });
+            });
+            // Click on language
+            $('.mylanguage').click(function () {
+                // Hide search
+                if ($("form.mysearchform").hasClass("showsearchform")) {
+                    $("form.mysearchform").toggleClass("showsearchform");
+                }
+
+                 // Hide any navigation items
+                 $collapsableItems.each(function () {
+                    $(this).collapse('hide');
+                });
+            });            
+
+            // Click on hamburger
+            $('.navbar-toggler').click(function() {
+                // Hide language choises
+                if ($("form.mylanguageform").hasClass("showlanguageform")) {
+                    $("form.mylanguageform").toggleClass("showlanguageform");
+                }
+
+                // Hide search
+                if ($("form.mysearchform").hasClass("showsearchform")) {
+                    $("form.mysearchform").toggleClass("showsearchform");
+                }
+            });
+
+    });
+    
+    
     </script>
 </body>
 
