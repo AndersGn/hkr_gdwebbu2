@@ -18,11 +18,11 @@
 <body>
     <header class="container">
         <nav class="navbar navbar-inverse fixed-top">
-            <i class="fa fa-search pr-3 mysearch" aria-hidden="true"></i>
-            <i class="fa fa-language mylanguage" aria-hidden="true"></i>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            <i class="fa fa-search pr-3 mysearch navicon" aria-hidden="true"></i>
+            <i class="fa fa-language mylanguage navicon" aria-hidden="true"></i>
+            <button class="navbar-toggler navbar-toggler-right navicon" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
                 aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+        <span class="navbar-toggler-icon navicon"></span>
       </button>
             <div class="navbar-brand">
                 <img src="assets/images/LoggaEksjoKommun_vitsvart.svg" width="147" height="50" class="d-inline-block align-top" alt="Logotyp">
@@ -238,6 +238,45 @@
             });
         });
     </script>
+
+
+    <!-- Make the current navicon active in navbar -->
+    <script>
+        $(function () {
+            $(document).on('click', '.navicon', function (e) {
+                $('.navicon').removeClass('activeicon');
+                $(this).addClass('activeicon');
+            });
+        });
+    </script>
+    <!-- Make the hamburger active in navbar -->
+     <script>
+        // Hambuger is expanded make the hamburger active
+        $(function () {
+            $('.navbar-collapse').on('shown.bs.collapse', function() {
+              // Get the SVG code
+              var bg = $(".navbar-toggler-icon").css("background-image");
+              // Replace with color we want
+              bg = bg.replace('(225,255,255,1.00)','(125,167,62,1.00)');
+              // Add the new SVG into html to override the CSS
+            $(".navbar-toggler-icon").attr('style', "background-image:" + bg + ' !important');
+              
+            });
+        });
+        // Hambuger is collapsed remove the active
+        $(function () {
+            $('.navbar-collapse').on('hidden.bs.collapse', function() {
+                // Get the default hamburger color from css
+                var bg = $(".navbar-toggler-icon").css("background-image");
+                bg = bg.replace('(125,167,62,1.00)','(225,255,255,1.00)');
+                // Replace HTML style
+                $(".navbar-toggler-icon").attr('style', "background-image:" + bg + ' !important');
+            });
+        });
+
+        </script>
+
+
     <!-- Make it possible to close hamburger menu when clicking somewehere outside hambuger -->
     <script>
         $(document).on('click', function (event) {
@@ -342,6 +381,7 @@
     
     
     </script>
+
 </body>
 
 </html>

@@ -168,9 +168,6 @@ footer {
     border-bottom: .05rem solid #7DA73E;
 }
 
-.secondary-footer {
-}
-
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open .dropdown-toggle.btn-primary {
     background-color: #7DA73E;
     border-color: #7DA73E;
@@ -187,8 +184,9 @@ a {
     color: #7DA73E;
 }
 
+
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,1.00)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(225,255,255,1.00)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
 
 .navbar-inverse .navbar-toggler {
@@ -270,4 +268,8 @@ a {
     border-radius: .25rem;
     opacity: 100;
     background-color: black;
+}
+
+.activeicon  {
+    color:#7DA73E;
 }
