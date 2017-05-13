@@ -116,7 +116,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h5>Näringslivsfrukost</h5>
-                                <img class="pull-left mr-2 mt-1" src="assets/images/DSC03886.jpg" widht="50px" height="50px">
+                                <img class="pull-left mr-2 mt-1" src="assets/images/DSC03886.jpg" alt="frukost">
                                 <div class="card-text">
                                     <p class="card-title">Varmt välkommen på näringslivsfrukost den 18 maj.</p>
                                 </div>
@@ -127,7 +127,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h5>Fiber till alla hushåll i Eksjö</h5>
-                                <img class="pull-left mr-2 mt-1" src="assets/images/103_0354.jpg" widht="50px" height="50px">
+                                <img class="pull-left mr-2 mt-1" src="assets/images/103_0354.jpg" alt="bredand via fiber">
                                 <div class="card-text">
                                     <p class="card-title">Telekomföretaget Telia erbjuder nu fiber till samtliga hushåll.</p>
                                 </div>
@@ -138,7 +138,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h5>Vilken är din favoritplats</h5>
-                                <img class="pull-left mr-2 mt-1" src="assets/images/_MG_1491.jpg" widht="50px" height="50px">
+                                <img class="pull-left mr-2 mt-1" src="assets/images/_MG_1491.jpg" alt="naturbild">
                                 <div class="card-text">
                                     <p class="card-title">Delta i föreställningen genom att dela med dig av din favoritplats.</p>
                                 </div>
@@ -151,7 +151,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h5>Nationell krisberedskapsvecka</h5>
-                                <img class="pull-left mr-2 mt-1" src="assets/images/IMG_7310.jpg" widht="50px" height="50px">
+                                <img class="pull-left mr-2 mt-1" src="assets/images/IMG_7310.jpg" alt="brand">
                                 <div class="card-text">
                                     <p class="card-title">Under vecka 19 genomförs krisberedskapsveckan.</p>
                                 </div>
@@ -162,7 +162,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h5>Kommun och Blåljusdag</h5>
-                                <img class="pull-left mr-2 mt-1" src="assets/images/DSCN2256.jpg" widht="50px" height="50px">
+                                <img class="pull-left mr-2 mt-1" src="assets/images/DSCN2256.jpg" alt="brandmän">
                                 <div class="card-text">
                                     <p class="card-title">Informationstält på parkeringen vid Hotellträdgården.</p>
                                 </div>
@@ -173,7 +173,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h5>Årets pristagare utsedda</h5>
-                                <img class="pull-left mr-2 mt-1" src="assets/images/Bild%20013.jpg" widht="50px" height="50px">
+                                <img class="pull-left mr-2 mt-1" src="assets/images/Bild%20013.jpg"  alt="guldmedalj">
                                 <div class="card-text">
                                     <p class="card-title">Nu har vinnarna av årets arkitektur & byggnadsvårdspris utsetts.</p>
                                 </div>
@@ -261,6 +261,14 @@
                 $("form.mysearchform").toggleClass("showsearchform");
             });
         });
+            // Hide search form when clicking outside navbar
+            $(document).on('click', function (event) {
+                var $clickedOn = $(event.target);
+
+                if ($clickedOn.parents('.navbar').length == 0 && $("form.mysearchform").hasClass("showsearchform")) {
+                    $("form.mysearchform").toggleClass("showsearchform");
+                }
+            });
     </script>
     <!-- Show / hide language field -->
     <script>
@@ -274,7 +282,7 @@
                 $("form.mylanguageform").toggleClass("showlanguageform");
             });
 
-            // Hide langue form when clicking somewhere else
+            // Hide language form when clicking outside navbar
             $(document).on('click', function (event) {
                 var $clickedOn = $(event.target);
 
