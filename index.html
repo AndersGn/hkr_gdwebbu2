@@ -18,8 +18,12 @@
 <body>
     <header class="container">
         <nav class="navbar navbar-inverse fixed-top">
+           
             <i class="fa fa-search pr-3 mysearch navicon" aria-hidden="true"></i>
-            <i class="fa fa-language mylanguage navicon" aria-hidden="true"></i>
+            <i class="fa fa-language-my pr-3 mt-2 mylanguage navicon" aria-hidden="true"></i>
+            <i class="fa fa-adjust-my pr-3 mt-2 myadjustment navicon" aria-hidden="true"></i>
+<!--             <span class="pr-3 fa my-icon mylanguage navicon"><img src="assets/icons/Flag_icon.svg"></span>-->
+            <!-- <i class="fa fa-language mylanguage navicon" aria-hidden="true"></i> -->
             <button class="navbar-toggler navbar-toggler-right navicon" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
                 aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon navicon"></span>
@@ -53,6 +57,22 @@
                     </form>
                 </div>
             </div>
+            <div class="container myadjustmentcontainer">
+                            <div class="col-md-12">
+                                <form action="index.html" class="myadjustmentform">
+                                    <div class="form-group row">
+                                        <ul class="navbar-nav mr-auto">
+                                            <li class="nav-item">
+                                                <a class="nav-link selectadjustment" href="#">Lyssna</a>
+                                            </li>
+                                            <li class="nav-item selectadjustment">
+                                                <a class="nav-link" href="#">Lättläst</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
 
             <div class="collapse navbar-collapse" id="navbarsExampleDefault">
 
@@ -346,7 +366,29 @@
             });
         });
     </script>
-    <!-- if not choosen search or language then hide them -->
+    <!-- Show / hide adjustment field -->
+    <script>
+        $(document).ready(function () {
+            // Click on the icon
+            $('.myadjustment').click(function () {
+               $("form.myadjustmentform").toggleClass("showadjustmentform");
+            });
+            // Click on a adjustment
+            $('.selectadjustment').click(function () {
+                $("form.myadjustmentform").toggleClass("showadjustmentform");
+            });
+
+            // Hide language form when clicking outside navbar
+            $(document).on('click', function (event) {
+                var $clickedOn = $(event.target);
+
+                if ($clickedOn.parents('.navbar').length == 0 && $("form.myadjustmentform").hasClass("showadjustmentform")) {
+                    $("form.myadjustmentform").toggleClass("showadjustmentform");
+                }
+            });
+        });
+    </script>
+    <!-- if not choosen search, language or adjustment then hide them -->
     <script>
     $(document).ready(function () {
             var $collapsableItems = $('.collapse');
@@ -358,6 +400,11 @@
                 // Hide language choises
                 if ($("form.mylanguageform").hasClass("showlanguageform")) {
                     $("form.mylanguageform").toggleClass("showlanguageform");
+                    
+                }
+                // Hide adjustment choises
+                if ($("form.myadjustmentform").hasClass("showadjustmentform")) {
+                    $("form.myadjustmentform").toggleClass("showadjustmentform");
                 }
 
                 // Hide any navigation items
@@ -370,13 +417,37 @@
                 // Hide search
                 if ($("form.mysearchform").hasClass("showsearchform")) {
                     $("form.mysearchform").toggleClass("showsearchform");
+                  
                 }
-
+                 // Hide adjustment choises
+                if ($("form.myadjustmentform").hasClass("showadjustmentform")) {
+                    $("form.myadjustmentform").toggleClass("showadjustmentform");
+                }
                  // Hide any navigation items
                  $collapsableItems.each(function () {
                     $(this).collapse('hide');
                 });
-            });            
+            });
+        
+        
+            // Click on adjustment
+            $('.myadjustment').click(function () {
+                // Hide language choises
+                if ($("form.mylanguageform").hasClass("showlanguageform")) {
+                    $("form.mylanguageform").toggleClass("showlanguageform");
+                    
+                }
+                 // Hide search
+               if ($("form.mysearchform").hasClass("showsearchform")) {
+                    $("form.mysearchform").toggleClass("showsearchform");
+                  
+                }
+
+                // Hide any navigation items
+                 $collapsableItems.each(function () {
+                    $(this).collapse('hide');
+                });
+            });
 
             // Click on hamburger
             $('.navbar-toggler').click(function() {
@@ -388,6 +459,11 @@
                 // Hide search
                 if ($("form.mysearchform").hasClass("showsearchform")) {
                     $("form.mysearchform").toggleClass("showsearchform");
+                }
+                
+                // Hide adjustment
+                if ($("form.myadjustmentform").hasClass("showadjustmentform")) {
+                    $("form.myadjustmentform").toggleClass("showadjustmentform");
                 }
             });
 
