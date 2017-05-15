@@ -1,1 +1,16 @@
-<svg id="Lager_1" data-name="Lager 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 12"><defs><style>.cls-1{stroke:#000;stroke-miterlimit:10;}</style></defs><title>RSSFeed_icon</title><circle cx="1.99" cy="9.76" r="1.09"/><path d="M2,9.17a.59.59,0,1,1-.59.59A.59.59,0,0,1,2,9.17m0-1A1.59,1.59,0,1,0,3.58,9.76,1.59,1.59,0,0,0,2,8.17Z"/><path class="cls-1" d="M9.51,8.47c0,1.55-.17-1.27-2-3.05S2.25,2.79,3.83,2.79A5.68,5.68,0,0,1,9.51,8.47Z"/><path class="cls-1" d="M10.89,4.63c0,.9-.35-.65-1.4-1.67s-2.9-1.68-2-1.68A3.35,3.35,0,0,1,10.89,4.63Z"/><path class="cls-1" d="M7.27,10.71c0,1.55-.17-1.27-2-3.05S0,5,1.59,5A5.68,5.68,0,0,1,7.27,10.71Z"/></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Lager_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 12 12" style="enable-background:new 0 0 12 12;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#7DA73E;}
+	.st1{fill:#7DA73E;stroke:#7DA73E;stroke-miterlimit:10;}
+</style>
+<title>RSSFeed_icon</title>
+<circle class="st0" cx="2" cy="9.8" r="1.1"/>
+<path class="st0" d="M2,9.2c0.3,0,0.6,0.3,0.6,0.6c0,0.3-0.3,0.6-0.6,0.6s-0.6-0.3-0.6-0.6S1.7,9.2,2,9.2L2,9.2 M2,8.2
+	c-0.9,0-1.6,0.7-1.6,1.6c0,0.9,0.7,1.6,1.6,1.6s1.6-0.7,1.6-1.6c0,0,0,0,0,0C3.6,8.9,2.9,8.2,2,8.2z"/>
+<path class="st1" d="M9.5,8.5c0,1.6-0.2-1.3-2-3.1S2.3,2.8,3.8,2.8C7,2.8,9.5,5.3,9.5,8.5C9.5,8.5,9.5,8.5,9.5,8.5z"/>
+<path class="st1" d="M10.9,4.6c0,0.9-0.4-0.7-1.4-1.7s-2.9-1.7-2-1.7C9.3,1.3,10.9,2.7,10.9,4.6C10.9,4.6,10.9,4.6,10.9,4.6z"/>
+<path class="st1" d="M7.3,10.7c0,1.6-0.2-1.3-2-3.1S0,5,1.6,5C4.7,5,7.3,7.5,7.3,10.7C7.3,10.7,7.3,10.7,7.3,10.7z"/>
+</svg>
