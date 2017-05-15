@@ -273,3 +273,17 @@ a {
 .activeicon  {
     color:#7DA73E;
 }
+
+.dropdown-item {
+    color: #7DA73E !important;
+}
+
+.dropdown-menu {
+    background-color: #000000 !important;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+    text-decoration: none;
+    background-color: #000000;
+    color: white !important;
+}
