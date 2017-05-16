@@ -19,11 +19,9 @@
     <header class="container">
         <nav class="navbar navbar-inverse fixed-top">
            
-            <i class="fa fa-search pr-3 mysearch navicon" aria-hidden="true"></i>
+            <i class="fa fa-search-my pr-3 mt-2 mysearch navicon" aria-hidden="true"></i>
             <i class="fa fa-language-my pr-3 mt-2 mylanguage navicon" aria-hidden="true"></i>
             <i class="fa fa-adjust-my pr-3 mt-2 myadjustment navicon" aria-hidden="true"></i>
-<!--             <span class="pr-3 fa my-icon mylanguage navicon"><img src="assets/icons/Flag_icon.svg"></span>-->
-            <!-- <i class="fa fa-language mylanguage navicon" aria-hidden="true"></i> -->
             <button class="navbar-toggler navbar-toggler-right navicon" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
                 aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon navicon"></span>
@@ -117,18 +115,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Turism</a>
                     </li>
-                    <!--
-                                <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-                                <div class="dropdown-menu" aria-labelledby="dropdown01">
-                                  <a class="dropdown-item" href="#">Action</a>
-                                  <a class="dropdown-item" href="#">Another action</a>
-                                  <a class="dropdown-item" href="#">Something else here</a>
-                                </div>
-                              </li>
-
-                    -->
-
                 </ul>
             </div>
         </nav>
@@ -315,25 +301,9 @@
                             <a href="#">Om webbplatsen</a><br>
                             <a href="#">Om cookies</a><br>
                             <a href="#">RSS<img class="ml-1 pb-1" src="assets/icons/RSSFeed_icon.svg" width="12px" heigh="12px"></a><br>
-                            <a href="#">Facebook<i class="pl-1 fa fa-facebook-official" aria-hidden="true"></i></a><br>
+                            <a href="#">Facebook<img class="ml-1 pb-1" src="assets/icons/Facebook_icon.svg" width="12px" heigh="12px"></a><br>
                         </p>
                     </div>
-                    <!--
-                                    <div class="col-4">
-                                        <div class="social  text-center">
-                                            <h5 class="mb-3">Följ Oss</h5>
-                                            <div class="col-12 icons">
-                                            <img class="mr-3" src="assets/icons/Calendar_icon.svg" width="40px" heigh="40px">
-                                            <img class="mr-3" src="assets/icons/RSSFeed_icon.svg" width="40px" heigh="40px">
-                                            <img class="mr-3" src="assets/icons/Instagram_icon.svg" width="40px" heigh="40px">
-                                            </div>
-                                            <div class="mt-3">
-                                            <button class="btn btn-primary my-2 my-sm-0" type="submit">Facebook</button>
-                                            <button class="btn btn-primary my-2 my-sm-0 mr-2" type="submit">Nyhetsbrev</button>
-                                            </div>
-                                            </div>
-                                    </div>
-                    -->
                 </div>
             </div>
             <!-- /.container -->
@@ -345,6 +315,10 @@
     <script src="assets/js/tether.min.js"></script>
     <script src="assets/js/jquery-3.1.1.slim.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+
+
+    <!-- Everything below here is only to get interative elements in layout, ugly hacks used for prototype of site, do not use!!! -->
+
     <!-- Make the current page active in navbar -->
     <script>
         $(function () {
@@ -355,7 +329,6 @@
         });
     </script>
 
-
     <!-- Make the current navicon active in navbar -->
     <script>
         $(function () {
@@ -365,6 +338,7 @@
             });
         });
     </script>
+
     <!-- Make the hamburger active in navbar -->
      <script>
         // Hambuger is expanded make the hamburger active
@@ -389,8 +363,7 @@
                 $(".navbar-toggler-icon").attr('style', "background-image:" + bg + ' !important');
             });
         });
-
-        </script>
+    </script>
 
 
     <!-- Make it possible to close hamburger menu when clicking somewehere outside hambuger -->
@@ -410,6 +383,7 @@
             }
         });
     </script>
+
     <!-- Show / hide search field -->
     <script>
         $(document).ready(function () {
@@ -427,6 +401,7 @@
 
            });
     </script>
+
     <!-- Show / hide language field -->
     <script>
         $(document).ready(function () {
@@ -449,6 +424,7 @@
             });
         });
     </script>
+
     <!-- Show / hide adjustment field -->
     <script>
         $(document).ready(function () {
@@ -471,88 +447,86 @@
             });
         });
     </script>
+
     <!-- if not choosen search, language or adjustment then hide them -->
     <script>
-    $(document).ready(function () {
-            var $collapsableItems = $('.collapse');
+        $(document).ready(function () {
+                var $collapsableItems = $('.collapse');
 
-            // Clean up choices (a real ugly hack but javascript is not focus in assigment only UI handling, navigation)
+                // Clean up choices (a real ugly hack but javascript is not focus in assigment only UI handling, navigation)
 
-            // Click on search
-            $('.mysearch').click(function () {
-                // Hide language choises
-                if ($("form.mylanguageform").hasClass("showlanguageform")) {
-                    $("form.mylanguageform").toggleClass("showlanguageform");
-                    
-                }
-                // Hide adjustment choises
-                if ($("form.myadjustmentform").hasClass("showadjustmentform")) {
-                    $("form.myadjustmentform").toggleClass("showadjustmentform");
-                }
+                // Click on search
+                $('.mysearch').click(function () {
+                    // Hide language choises
+                    if ($("form.mylanguageform").hasClass("showlanguageform")) {
+                        $("form.mylanguageform").toggleClass("showlanguageform");
 
-                // Hide any navigation items
-                 $collapsableItems.each(function () {
-                    $(this).collapse('hide');
+                    }
+                    // Hide adjustment choises
+                    if ($("form.myadjustmentform").hasClass("showadjustmentform")) {
+                        $("form.myadjustmentform").toggleClass("showadjustmentform");
+                    }
+
+                    // Hide any navigation items
+                     $collapsableItems.each(function () {
+                        $(this).collapse('hide');
+                    });
                 });
-            });
-            // Click on language
-            $('.mylanguage').click(function () {
-                // Hide search
-                if ($("form.mysearchform").hasClass("showsearchform")) {
-                    $("form.mysearchform").toggleClass("showsearchform");
-                  
-                }
-                 // Hide adjustment choises
-                if ($("form.myadjustmentform").hasClass("showadjustmentform")) {
-                    $("form.myadjustmentform").toggleClass("showadjustmentform");
-                }
-                 // Hide any navigation items
-                 $collapsableItems.each(function () {
-                    $(this).collapse('hide');
+                // Click on language
+                $('.mylanguage').click(function () {
+                    // Hide search
+                    if ($("form.mysearchform").hasClass("showsearchform")) {
+                        $("form.mysearchform").toggleClass("showsearchform");
+
+                    }
+                     // Hide adjustment choises
+                    if ($("form.myadjustmentform").hasClass("showadjustmentform")) {
+                        $("form.myadjustmentform").toggleClass("showadjustmentform");
+                    }
+                     // Hide any navigation items
+                     $collapsableItems.each(function () {
+                        $(this).collapse('hide');
+                    });
                 });
-            });
-        
-        
-            // Click on adjustment
-            $('.myadjustment').click(function () {
-                // Hide language choises
-                if ($("form.mylanguageform").hasClass("showlanguageform")) {
-                    $("form.mylanguageform").toggleClass("showlanguageform");
-                    
-                }
-                 // Hide search
-               if ($("form.mysearchform").hasClass("showsearchform")) {
-                    $("form.mysearchform").toggleClass("showsearchform");
-                  
-                }
 
-                // Hide any navigation items
-                 $collapsableItems.each(function () {
-                    $(this).collapse('hide');
+
+                // Click on adjustment
+                $('.myadjustment').click(function () {
+                    // Hide language choises
+                    if ($("form.mylanguageform").hasClass("showlanguageform")) {
+                        $("form.mylanguageform").toggleClass("showlanguageform");
+
+                    }
+                     // Hide search
+                   if ($("form.mysearchform").hasClass("showsearchform")) {
+                        $("form.mysearchform").toggleClass("showsearchform");
+
+                    }
+
+                    // Hide any navigation items
+                     $collapsableItems.each(function () {
+                        $(this).collapse('hide');
+                    });
                 });
-            });
 
-            // Click on hamburger
-            $('.navbar-toggler').click(function() {
-                // Hide language choises
-                if ($("form.mylanguageform").hasClass("showlanguageform")) {
-                    $("form.mylanguageform").toggleClass("showlanguageform");
-                }
+                // Click on hamburger
+                $('.navbar-toggler').click(function() {
+                    // Hide language choises
+                    if ($("form.mylanguageform").hasClass("showlanguageform")) {
+                        $("form.mylanguageform").toggleClass("showlanguageform");
+                    }
 
-                // Hide search
-                if ($("form.mysearchform").hasClass("showsearchform")) {
-                    $("form.mysearchform").toggleClass("showsearchform");
-                }
-                
-                // Hide adjustment
-                if ($("form.myadjustmentform").hasClass("showadjustmentform")) {
-                    $("form.myadjustmentform").toggleClass("showadjustmentform");
-                }
-            });
+                    // Hide search
+                    if ($("form.mysearchform").hasClass("showsearchform")) {
+                        $("form.mysearchform").toggleClass("showsearchform");
+                    }
 
-    });
-    
-    
+                    // Hide adjustment
+                    if ($("form.myadjustmentform").hasClass("showadjustmentform")) {
+                        $("form.myadjustmentform").toggleClass("showadjustmentform");
+                    }
+                });
+        });
     </script>
 
 </body>
